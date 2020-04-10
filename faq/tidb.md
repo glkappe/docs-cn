@@ -383,7 +383,7 @@ Binary 不是我们建议的安装方式，对升级支持也不友好，建议�
 #### 3.1.8 TiDB 里面可以执行 kill 命令吗？
 
 - 可以 kill DML 语句，首先使用 `show processlist`，找到对应 session 的 id，然后执行 `kill tidb [session id]`。
-- 可以 kill DDL 语句，首先使用 `admin show ddl jobs`，查找需要 kill 的 DDL job ID，然后执行 `admin cancel ddl jobs 'job_id' [, 'job_id'] ...`。具体可以参考 [admin 操作](/reference/sql/statements/admin.md)。
+- 可以 kill DDL 语句，首先使用 `admin show ddl jobs`，查找需要 kill 的 DDL job ID，然后执行 `admin cancel ddl jobs job_id [, job_id] ...`。具体可以参考 [admin 操作](/reference/sql/statements/admin.md)。
 
 #### 3.1.9 TiDB 是否支持会话超时？
 
@@ -929,7 +929,7 @@ RUNNING_JOBS: ID:121, Type:add index, State:running, SchemaState:write reorganiz
 可以使用 `admin show ddl` 语句查看正在运行的 DDL 作业。
 
 - `admin show ddl jobs`：用于查看当前 DDL 作业队列中的所有结果（包括正在运行以及等待运行的任务）以及已执行完成的 DDL 作业队列中的最近十条结果。
-- `admin show ddl job queries 'job_id' [, 'job_id'] ...`：用于显示 `job_id` 对应的 DDL 任务的原始 SQL 语句。此 `job_id` 只搜索正在执行中的任务以及 DDL 历史作业队列中的最近十条结果。
+- `admin show ddl job queries job_id [, job_id] ...`：用于显示 `job_id` 对应的 DDL 任务的原始 SQL 语句。此 `job_id` 只搜索正在执行中的任务以及 DDL 历史作业队列中的最近十条结果。
 
 #### 5.1.5 TiDB 是否支持基于 COST 的优化（CBO），如果支持，实现到什么程度？
 

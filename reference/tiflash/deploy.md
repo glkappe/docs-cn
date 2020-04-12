@@ -36,7 +36,7 @@ TiFlash 支持多目录存储，所以无需使用 RAID。
 
 ## 针对 TiDB 的版本要求
 
-目前 TiFlash 的测试是基于 TiDB 4.0 版本的相关组件（包括 TiDB、PD、TiKV、TiFlash）来进行的，TiDB 4.0 版本的下载方式参考以下安装部署步骤。
+目前 TiFlash 的测试是基于 TiDB 4.0.0-rc 及以上版本的相关组件（包括 TiDB、PD、TiKV、TiFlash）来进行的，TiDB 4.0.0-rc 版本的下载方式参考以下安装部署步骤。
 
 ## 安装部署 TiFlash
 

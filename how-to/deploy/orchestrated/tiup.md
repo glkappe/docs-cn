@@ -18,7 +18,7 @@ category: how-to
 - [第 7 步：检查部署的 TiDB 集群情况](#第-7-步检查部署的-tidb-集群情况)
 - [第 8 步：执行集群启动命令](#第-8-步执行集群启动命令)
 - [第 9 步：通过 TiUP 检查集群状态](#第-9-步通过-tiup-检查集群状态)
-- [第 10 步：通过 TiDB Dashboard 和 Grafana 检查集群状态](#第-10-步通过-tidb-dashboard-和-grafana-检查集群状态)
+- [第 10 步：通过 TiDB 和 Grafana 检查集群状态](#第-10-步通过-tidb-dashboard-和-grafana-检查集群状态)
 - [第 11 步：登录数据库执行简单 DML、DDL 操作和查询 SQL 语句](#第-11-步登录数据库执行简单-dmlddl-操作和查询-sql-语句)
 
 另外，本文还提供了使用 TiUP 关闭、销毁集群的命令，以及使用 TiUP 部署的常见问题和解决方案。具体参见：
@@ -1260,7 +1260,7 @@ ID              Role          Host      Ports                            Status 
 
 #### 查看 TiDB Dashboard 检查 TiDB 集群状态
 
-- 通过 `{pd-leader-ip}:2379/dashboard` 登录 TiDB Dashboard，登录用户和口令为 TiDB 数据库 root 用户和口令，如果你修改过数据库的 root 密码，则以修改后的密码为准，默认密码为空。
+- 通过 `{pd-ip}:2379/dashboard` 登录 TiDB Dashboard，登录用户和口令为 TiDB 数据库 root 用户和口令，如果你修改过数据库的 root 密码，则以修改后的密码为准，默认密码为空。
 
     ![TiDB-Dashboard](/media/tiup/tidb-dashboard.png)
 
